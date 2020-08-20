@@ -28303,6 +28303,32 @@ var MyButton = function MyButton() {
 
 var _default = MyButton;
 exports.default = _default;
+},{"react":"../node_modules/react/index.js"}],"components/Buscador.js":[function(require,module,exports) {
+"use strict";
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.default = void 0;
+
+var _react = _interopRequireDefault(require("react"));
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+var Buscador = function Buscador() {
+  return /*#__PURE__*/_react.default.createElement("form", null, /*#__PURE__*/_react.default.createElement("div", {
+    className: "row"
+  }, /*#__PURE__*/_react.default.createElement("div", {
+    className: "form-group col-md-8"
+  }, /*#__PURE__*/_react.default.createElement("input", {
+    type: "text",
+    className: "form-control form-control-lg",
+    placeholder: "Busca tu imagen, Ej.: Futbol"
+  }))));
+};
+
+var _default = Buscador;
+exports.default = _default;
 },{"react":"../node_modules/react/index.js"}],"components/MyHeader.js":[function(require,module,exports) {
 "use strict";
 
@@ -28314,6 +28340,8 @@ exports.default = void 0;
 var _react = _interopRequireWildcard(require("react"));
 
 var _MyButton = _interopRequireDefault(require("./MyButton"));
+
+var _Buscador = _interopRequireDefault(require("./Buscador"));
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -28357,7 +28385,7 @@ var MyHeader = /*#__PURE__*/function (_Component) {
   _createClass(MyHeader, [{
     key: "render",
     value: function render() {
-      return /*#__PURE__*/_react.default.createElement("header", null, /*#__PURE__*/_react.default.createElement("h1", null, "Soy un encabezado"), /*#__PURE__*/_react.default.createElement(_MyButton.default, null));
+      return /*#__PURE__*/_react.default.createElement("header", null, /*#__PURE__*/_react.default.createElement("h1", null, "Soy un encabezado"), /*#__PURE__*/_react.default.createElement(_Buscador.default, null), /*#__PURE__*/_react.default.createElement(_MyButton.default, null));
     }
   }]);
 
@@ -28366,7 +28394,7 @@ var MyHeader = /*#__PURE__*/function (_Component) {
 
 var _default = MyHeader;
 exports.default = _default;
-},{"react":"../node_modules/react/index.js","./MyButton":"components/MyButton.js"}],"components/MyFooter.js":[function(require,module,exports) {
+},{"react":"../node_modules/react/index.js","./MyButton":"components/MyButton.js","./Buscador":"components/Buscador.js"}],"components/MyFooter.js":[function(require,module,exports) {
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -28495,7 +28523,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "36973" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "58786" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};
