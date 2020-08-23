@@ -1,17 +1,21 @@
 import React, { Component } from 'react';
 import MyButton from './MyButton';
-import Buscador from './Buscador';
 
 class MyHeader extends Component {
     render() {
+        const { content, color, onClick } = this.props;
+
         return (
-            <header>
-                <h1>Soy un encabezado</h1>
-                <Buscador />
-                <MyButton />
+            <header className="el-nombre-de-la-clase">
+                <h1 style={{color}}>{content}</h1>
+                <MyButton onClick={onClick} show className="clase-custom" title="Botón en el header" color="green" />
             </header>
         );
     }
+}
+
+MyHeader.defaultProps = {
+    color: 'yellow'
 }
 
 export default MyHeader;
